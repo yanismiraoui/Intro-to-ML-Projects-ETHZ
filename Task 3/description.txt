@@ -1,0 +1,6 @@
+This submission aims to solve Task 3. To solve this problem with the best score possible, we have mostly used Python with the numpy and tensorflow libraries. We also have made use of Google Colab for computational efficiency. 
+
+To pass the baseline and get the best result possible, we have followed the instructions put in the task description.
+The first step to solve this task was to preprocess the large amount of images to obtain pixels data with the right format for our analysis. Moreover, the next step was to decide which pretrained imaging model would perform best for our task. After trying many different models (mainly MobileNet), we decided to use MobileNetV3 Large Minimalistic pretrained model for the rest of our study. This model was very performant and didn't require too much computation time.  
+On the other hand, we added to our model a few layers to fine-tune this pretrained model for our specific task. We then proceeded to the training of our model in Google Colab in order to use a GPU machine.
+Indeed, our best result led to a score of 0.7171754569014843 on the public leaderboard.

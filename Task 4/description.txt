@@ -1,0 +1,6 @@
+This submission aims to solve Task 4. To solve this problem with the best score possible, we have mostly used Python with the pandas, numpy and tensorflow libraries. 
+
+To pass the baseline and get the best result possible, we have followed the instructions put in the task description and the handout document. 
+The first step to solve this task was to preprocess the features of the molecules to obtain a scaled and cleaned dataset with the right format for our analysis. Moreover, the next step was to build a first model only based on the "pretrain" data. This will allow us to use the information of the large pretrain dataset in order to predict the HOMO-LUMO of the test molecules with a better accuracy. Indeed, we only have access to a small dataset (100 values) for our training : we therefore need to use transfer learning. After freezing the weights of this first model, we trained a second neural network model on top of the first one that fits the small training dataset.
+Finally, to fine-tune and improve our results, we unfroze the weights of the first model and re-trained the whole neural network with a very small learning rate. This method was suggested in this keras tutorial: https://keras.io/guides/transfer_learning/. This improved quite importantly our results. 
+Indeed, our best result led to a score of 0.22253157697713785 on the public leaderboard.

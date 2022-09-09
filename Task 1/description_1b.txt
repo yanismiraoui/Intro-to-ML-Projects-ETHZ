@@ -1,0 +1,5 @@
+This submission aims to solve Task 1b. To solve this problem with the best score possible, we have mostly used Python with the pandas and sklearn libraries. 
+
+To pass the baseline and get the best result possible, we have followed the instructions put in the task description. 
+The first step to solve this task was to perform the transformations phi (e.g. exp(x_i), cos(x_i), ...). With these new transformed columns and features we build a simple Linear Regression model and store the values of its coefficients into a csv file in the correct submission format. 
+This method led to a score passing and out performing the baseline. Indeed, our best result led to a score of 17.49197437048868 on the public leaderboard.

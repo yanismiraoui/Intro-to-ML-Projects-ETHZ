@@ -1,0 +1,8 @@
+This submission aims to solve Task 1a. To solve this problem with the best score possible, we have mostly used Python with the pandas and sklearn libraries. 
+
+To pass the baseline and get the best result possible, we have followed the instructions put in the task description. 
+The first step to solve this task was to determine the optimal way to implement 10-fold cross-validation. We used two simple methods in order to obtain the average of the RMSE over 10 test folds. 
+The first method implements a for loop "by hand" and fits a Ridge regression model for each lamba before averaging over a 10 fold cross-validation. 
+The second methods uses GridSearchCV to compute the average cross validation RMSE for the 5 different lambda values. GridSearchCV is a function of the sklearn package that allows to efficiently perform such a task.
+This second method led to better results on the public leaderboard.
+Indeed, our best result led to a score of 17.49197437048868 on the public leaderboard.

@@ -1,0 +1,6 @@
+This submission aims to solve Task 2. To solve this problem with the best score possible, we have mostly used Python with the pandas and sklearn libraries. 
+
+To pass the baseline and get the best result possible, we have followed the instructions put in the task description. 
+The first step to solve this task was to impute the missing values and create the necessary features for our analysis. To impute the missing values, we used a simple method of imputing the mode of each column for each missing values. On the other hand, we decided to build the different features by taking the mean, variance, max, min and median of each column for each patient over the 12 timesteps. Indeed, taking all the 12 timesteps for each column and for each patient would be very computationally expensive.
+In order to build a performant model, we decided to use RandomForest and fit the model with the data using either a MultiOutputClassifier, a simple single output classifier, or MultiOutputRegressor. These multioutput models were easily implemented using sklearn. Moreover, to improve the performance of our models, we used GridSearchCV to optimize our hyperparameters for each sub-task.
+Indeed, our best result led to a score of 0.7629491840131241 on the public leaderboard.
